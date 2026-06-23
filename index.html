@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>特定技能 専用ホームページ制作 ご提案｜あさひほうむ御中</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Hiragino Sans","Meiryo",sans-serif;background:#eef1f6;color:#2d3748;line-height:1.8}
+header{background:linear-gradient(135deg,#0f4c81 0%,#1e6091 100%);color:#fff;padding:48px 24px 40px;text-align:center}
+header .label{font-size:12px;letter-spacing:3px;opacity:.8;text-transform:uppercase;margin-bottom:10px}
+header h1{font-size:26px;font-weight:700;margin-bottom:14px;line-height:1.5}
+header .meta{font-size:13px;opacity:.85}
+.container{max-width:920px;margin:0 auto;padding:40px 20px 90px}
+.section{margin-bottom:44px}
+.section-title{font-size:19px;font-weight:700;color:#0f4c81;border-left:5px solid #0f4c81;padding-left:14px;margin-bottom:18px}
+.lead{background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);padding:24px 26px;font-size:14.5px;break-inside:avoid}
+.lead strong{color:#0f4c81}
+.hl{background:linear-gradient(transparent 60%,#ffe9a8 60%);font-weight:700}
+
+/* 料金プラン */
+.plans{display:flex;gap:16px;flex-wrap:wrap;break-inside:avoid}
+.plan{flex:1;min-width:230px;background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.07);overflow:hidden;border:2px solid #e2e8f0;display:flex;flex-direction:column;break-inside:avoid;page-break-inside:avoid}
+.plan.best{border-color:#e8902a;box-shadow:0 6px 20px rgba(232,144,42,.22)}
+.ribbon{background:#e8902a;color:#fff;font-size:12px;font-weight:700;text-align:center;padding:7px 6px;letter-spacing:.5px}
+.plan-head{padding:18px 18px 16px;text-align:center;border-bottom:1px solid #f1f5f9}
+.plan.best .plan-head{background:linear-gradient(135deg,#fff7ec,#ffeccd)}
+.plan-name{font-size:17px;font-weight:700;color:#1e293b;margin-bottom:6px}
+.plan-tag{font-size:11.5px;color:#64748b;margin-bottom:12px;min-height:30px}
+.plan-price{font-size:28px;font-weight:800;color:#0f4c81}
+.plan.best .plan-price{color:#e8902a}
+.plan-body{padding:16px 18px 18px;flex:1}
+.plan-body ul{list-style:none;font-size:13px}
+.plan-body li{padding:6px 0 6px 22px;position:relative;border-bottom:1px dashed #eef2f7}
+.plan-body li:last-child{border-bottom:none}
+.plan-body li::before{content:"✓";position:absolute;left:0;color:#1e9e6a;font-weight:700}
+.plan-body li.add::before{content:"＋";color:#e8902a}
+.plan-foot{padding:0 18px 18px;text-align:center}
+.warranty{display:inline-block;margin-top:4px;background:#e6f4ee;color:#1e7a52;font-size:11px;font-weight:700;padding:4px 12px;border-radius:6px}
+.warranty.no{background:#f1f5f9;color:#94a3b8}
+
+/* 保守 */
+.maint{background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);padding:22px 26px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;break-inside:avoid}
+.maint .price{font-size:24px;font-weight:800;color:#0f4c81;white-space:nowrap}
+.maint .desc{font-size:13.5px;flex:1;min-width:220px}
+
+/* 比較表 */
+.cmp{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.06);break-inside:avoid}
+.cmp th,.cmp td{padding:13px 14px;font-size:13.5px;text-align:center;border-bottom:1px solid #f1f5f9}
+.cmp thead th{background:#0f4c81;color:#fff;font-weight:600}
+.cmp thead th.ours{background:#e8902a}
+.cmp td.item{text-align:left;font-weight:600;color:#334155;background:#f8fafc}
+.cmp td.ours{background:#fff7ec;font-weight:700;color:#b45309}
+.cmp tr:last-child td{border-bottom:none}
+
+/* フロー */
+.flow{display:flex;flex-direction:column;gap:10px}
+.fstep{background:#fff;border-radius:10px;box-shadow:0 1px 5px rgba(0,0,0,.05);padding:14px 18px;display:flex;align-items:center;gap:16px;break-inside:avoid}
+.fnum{background:#0f4c81;color:#fff;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0}
+.fstep .ft{font-size:14px;font-weight:700;color:#1e293b}
+.fstep .fd{font-size:12.5px;color:#64748b}
+
+/* 安心 */
+.assure{display:flex;gap:14px;flex-wrap:wrap;break-inside:avoid}
+.acard{flex:1;min-width:200px;background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);padding:20px;text-align:center;break-inside:avoid}
+.acard .ai{height:38px;display:flex;align-items:center;justify-content:center;margin-bottom:8px}
+.acard .at{font-size:14px;font-weight:700;color:#0f4c81;margin-bottom:6px}
+.acard .ad{font-size:12.5px;color:#475569}
+
+footer{text-align:center;font-size:12px;color:#94a3b8;padding:30px;border-top:1px solid #e2e8f0}
+.note{font-size:12px;color:#64748b;margin-top:12px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="label">Website Proposal</div>
+  <h1>特定技能 専用ホームページ制作<br>ご提案書</h1>
+  <div class="meta">あさひほうむ 御中 ／ ご提案日：2026年06月23日 ／ AIフローアーキテクト</div>
+</header>
+
+<div class="container">
+
+  <!-- 概要 -->
+  <div class="section">
+    <div class="section-title">ご提案の概要</div>
+    <div class="lead">
+      人手不足で外国人材を雇う企業が増えるなか、その<strong>生活サポートを代行する専門機関</strong>として、
+      御社の専門性と「<strong>安さ＋手厚さ</strong>」という強みを、しっかり伝わる<strong>専用ホームページ</strong>として新設するご提案です。<br><br>
+      既存の「あさひ労務管理センター」サイトは労務の顔として引き続き機能させたまま、
+      そこから育った<strong>特定技能専用の新しい顔</strong>を建てるイメージです。<br><br>
+      ゴールは集客の母数を一気に増やすことではなく、
+      <span class="hl">検索・ご紹介・動画から来た見込み客が、サービス内容と想いを深く理解し「信頼して任せられる」と感じる着地点</span>をつくること。
+      ＝法令順守の真っ当な企業との取引を広げる「信頼の土台」です。
+    </div>
+  </div>
+
+  <!-- 料金プラン -->
+  <div class="section">
+    <div class="section-title">料金プラン（3タイプ・税込）</div>
+    <div class="plans">
+
+      <div class="plan">
+        <div class="plan-head">
+          <div class="plan-name">ライト設計</div>
+          <div class="plan-tag">まずは整った専用サイトを</div>
+          <div class="plan-price">¥298,000</div>
+        </div>
+        <div class="plan-body">
+          <ul>
+            <li>15ページのホームページ</li>
+            <li>オリジナルデザイン（スマホ対応）</li>
+            <li>投稿・編集機能（ブログ／お役立ち／お客様の声を自社更新）</li>
+            <li>お問い合わせフォーム</li>
+            <li>特定技能 求人掲載ページ</li>
+            <li>プライバシーポリシー</li>
+            <li>Google表示の基本設定（検索に出る土台）</li>
+          </ul>
+        </div>
+        <div class="plan-foot"><span class="warranty no">修正3回まで</span></div>
+      </div>
+
+      <div class="plan best">
+        <div class="ribbon">★ いちばん人気・おすすめ</div>
+        <div class="plan-head">
+          <div class="plan-name">スタンダード設計</div>
+          <div class="plan-tag">信頼の土台が完成する本命プラン</div>
+          <div class="plan-price">¥398,000</div>
+        </div>
+        <div class="plan-body">
+          <ul>
+            <li>ライト設計の内容すべて</li>
+            <li class="add">既存顧客向け 会員ページ（ログイン式・限定情報／書類ダウンロード）</li>
+            <li class="add">検索インデックス管理（Search Console登録＋主要ページのSEO最適化＋構造化データ）</li>
+          </ul>
+        </div>
+        <div class="plan-foot"><span class="warranty">修正無制限 ＋ 全額返金保証</span></div>
+      </div>
+
+      <div class="plan">
+        <div class="plan-head">
+          <div class="plan-name">フル設計</div>
+          <div class="plan-tag">動画で“顔の見える信頼”まで</div>
+          <div class="plan-price">¥498,000</div>
+        </div>
+        <div class="plan-body">
+          <ul>
+            <li>スタンダード設計の内容すべて</li>
+            <li class="add">SEO強化（分野別＝製造／農業／介護ごとの検索入口づくり）</li>
+            <li class="add">YouTube動画 初回撮影1回（出張・撮影・編集・投稿・専用ページ反映／交通費込み）<br><small style="color:#94a3b8">サイト・YouTube・Googleビジネス・SNSで多目的に使い回せます</small></li>
+            <li class="add">初期記事の投稿代行 5本</li>
+            <li class="add">公開後の伴走サポート 1ヶ月</li>
+          </ul>
+        </div>
+        <div class="plan-foot"><span class="warranty">修正無制限 ＋ 全額返金保証</span></div>
+      </div>
+
+    </div>
+    <div class="note">※ 全プラン共通：制作期間 1.5〜2ヶ月／着手金 50%／ドメイン・サーバー実費は御社ご負担（年 数千〜1万円程度）。</div>
+  </div>
+
+  <!-- 保守 -->
+  <div class="section">
+    <div class="section-title">公開後の保守（必要な時だけ）</div>
+    <div class="maint">
+      <div class="price">¥14,900 <small style="font-size:13px;color:#94a3b8">／ 3ヶ月に1回</small></div>
+      <div class="desc">
+        月額固定ではなく、<strong>3ヶ月に1度ご依頼いただくスポット保守</strong>です（軽微修正・更新代行・セキュリティ／表示確認・動作チェック）。<br>
+        「毎月の保守は不要」というご要望にそのまま合わせた形です。記事の継続投稿が必要な場合は別途オプションでご用意します。
+      </div>
+    </div>
+  </div>
+
+  <!-- 競合比較 -->
+  <div class="section">
+    <div class="section-title">他社さまご提案との比較</div>
+    <table class="cmp">
+      <thead>
+        <tr><th class="item">項目</th><th>他社さまご提案</th><th class="ours">当方（スタンダード設計）</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="item">初期費用</td><td>862,400円</td><td class="ours">398,000円（約半額以下）</td></tr>
+        <tr><td class="item">制作期間</td><td>3.5〜4ヶ月</td><td class="ours">1.5〜2ヶ月（約半分）</td></tr>
+        <tr><td class="item">修正対応</td><td>月5回まで</td><td class="ours">無制限</td></tr>
+        <tr><td class="item">保証</td><td>記載なし</td><td class="ours">全額返金保証</td></tr>
+        <tr><td class="item">月額保守</td><td>22,000円／月（固定）</td><td class="ours">14,900円／3ヶ月（必要な時だけ）</td></tr>
+        <tr><td class="item">動画</td><td>なし</td><td class="ours">フル設計で対応可</td></tr>
+      </tbody>
+    </table>
+    <div class="note">※ AI制作により「人の制作工数」を圧縮しています。削るのは工数だけで、ページ数・機能・品質は同等以上です。</div>
+  </div>
+
+  <!-- 安心保証 -->
+  <div class="section">
+    <div class="section-title">安心してお任せいただける理由</div>
+    <div class="assure">
+      <div class="acard"><div class="ai"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#0f4c81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></div><div class="at">修正無制限（スタンダード・フル）</div><div class="ad">ご納得いただけるまで何度でも。回数を気にせず詰め切れます。</div></div>
+      <div class="acard"><div class="ai"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#0f4c81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div><div class="at">全額返金保証（スタンダード・フル）</div><div class="ad">万一ご満足いただけない場合は全額返金。だから着手金もご安心ください。</div></div>
+      <div class="acard"><div class="ai"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#0f4c81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div class="at">実績ある信頼関係</div><div class="ad">36協定自動化ツールを継続してお任せいただいている実績があります。</div></div>
+    </div>
+  </div>
+
+  <!-- 制作フロー -->
+  <div class="section">
+    <div class="section-title">制作の流れ</div>
+    <div class="flow">
+      <div class="fstep"><div class="fnum">1</div><div><div class="ft">プラン確定・着手金（50%）ご入金</div><div class="fd">ご入金確認後すぐに制作スタート</div></div></div>
+      <div class="fstep"><div class="fnum">2</div><div><div class="ft">デザイン・構成のご確認</div><div class="fd">トップデザイン案・ページ構成をご確認いただきます</div></div></div>
+      <div class="fstep"><div class="fnum">3</div><div><div class="ft">制作・修正（無制限で詰め切り）</div><div class="fd">原稿・画像をもとに15ページを制作。ご納得まで調整</div></div></div>
+      <div class="fstep"><div class="fnum">4</div><div><div class="ft">公開（1.5〜2ヶ月で完了）</div><div class="fd">残金ご精算後に本公開。フル設計は動画撮影・伴走も実施</div></div></div>
+      <div class="fstep"><div class="fnum">5</div><div><div class="ft">公開後の保守（必要な時だけ）</div><div class="fd">3ヶ月に1度のスポット保守でメンテナンス</div></div></div>
+    </div>
+  </div>
+
+  <div class="lead" style="text-align:center;font-size:15px">
+    まずは <strong style="color:#e8902a">スタンダード設計（¥398,000）</strong> を軸に、
+    動画まで踏み込むならフル設計をご検討いただくのがおすすめです。<br>
+    ご不明点があればお気軽にお申し付けください。
+  </div>
+
+</div>
+
+<footer>特定技能 専用ホームページ制作 ご提案書 ｜ AIフローアーキテクト ｜ 2026年06月23日</footer>
+
+</body>
+</html>
